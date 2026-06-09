@@ -10,6 +10,7 @@ function App() {
 
   useEffect(() => {
     const vehiculosGuardados = localStorage.getItem('vehiculos')
+    console.log('Cargando desde localStorage:', vehiculosGuardados)
     if (vehiculosGuardados) {
       setVehiculos(JSON.parse(vehiculosGuardados))
     }
@@ -38,7 +39,7 @@ function App() {
         <div className="header-content">
           <div className="logo">
             <span className="logo-icon">P</span>
-            <h1>Sistema de Gestión de Estacionamientos</h1>
+            <h1>Parking System</h1>
           </div>
           <div className="estado-cupos">
             <span className={`cupos ${cuposDisponibles === 0 ? 'lleno' : cuposDisponibles <= 3 ? 'poco' : ''}`}>
@@ -65,9 +66,9 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>2024 - Sistema de Gestión de Estacionamientos</p>
-        <p>Contacto: +56 2 1234 5678 | info@parking.cl</p>
-        <p className="footer-credits">Desarrollado para Programacion </p>
+        <p>2026 - Parking System</p>
+        <p>Contacto: +56 9 1234 5678 | Luistroncoso@parking.cl</p>
+        <p className="footer-credits">Desarrollado por Luis Troncoso</p>
       </footer>
     </div>
   )
